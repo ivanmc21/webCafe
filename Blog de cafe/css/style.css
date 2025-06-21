@@ -1,0 +1,465 @@
+:root{
+    --primario: #784D3C;
+    --gris: #E1E1E1;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --fuente-principal: sans-serif 3.8rem;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;/*1 rem = 10px*/
+    font-family: 'krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 75%);
+}
+h1{
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h2{
+    font: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    font-size: 1.8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--negro);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+
+/* Estilo del contenedor principal con la imagen */
+.hero {
+    background-image: url('../img/banner.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /*background-position: center; */
+    height: 50rem; 
+    position: relative; 
+    color: var(--blanco); 
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    color: white;
+    text-align: center;
+}
+
+/* Contenido dentro de la sección hero */
+.contenido__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    padding: 1rem 2rem;
+    max-width: 600px; /* Controla el ancho máximo */
+}
+.hero-footer {
+    background-color: #000000;
+    background-size: cover; 
+    background-position: center; 
+    height: 9rem; 
+    position: relative;
+    color: var(--blanco); 
+}
+
+/* Encabezado del contenido */
+.contenido__hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Párrafo del contenido */
+.contenido__hero p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--blanco);
+}
+
+/* Barra de navegación */
+.nav-bg {
+    width: 100%;
+    background-color: transparent; 
+    padding: 2rem 10rem; /* Espaciado interno */
+}
+
+.navegacion-principal {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Distribuye espacio entre logo y enlaces */
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen si es necesario */
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.7rem; /* Tamaño del texto */
+    font-weight: 700;
+    margin: 0 1rem; /* Espaciado horizontal entre enlaces */
+    padding: .5rem 1rem;
+    text-align: center;
+}
+.menu-links a:hover{
+    background-color: rgba(148, 145, 145, 0.4); /* Con 50% de transparencia */
+}
+
+
+.navegacion-principal span{
+    font-weight: normal;
+}
+
+.navegacion-principal .logo h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: var(--blanco);
+}
+
+.menu-links {
+    display: flex; /* Alinea los enlaces horizontalmente */
+    gap: 1rem; /* Espaciado entre enlaces */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navegacion-principal {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .menu-links {
+        flex-direction: column; /* Coloca los enlaces verticalmente */
+        gap: 0.5rem; /* Reduce el espaciado */
+    }
+
+    
+}
+
+.nav-bg-footer {
+    width: 100%;
+    background-color: var(--negro); 
+    padding: 2rem 10rem; /* Espaciado interno */
+}
+  
+.layout {
+    width: 70%;
+    max-height: 205rem;
+    margin: 3rem auto 5rem auto; /*arriba derecha abajo izquierda*/
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Coloca el contenido en un display flex para acomodarlo en columnas*/
+@media (max-width: 768px){
+    .layout{
+        width: 90%;
+        max-height: 405rem;
+        margin: 3rem auto 5rem auto; /*arriba derecha abajo izquierda*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button{
+        width: 100%;
+    }
+
+    .button-cursos{
+        width: 100%;
+    }    
+    .element-3{
+        border-bottom: 1px solid var(--gris);
+    }
+}
+.element{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.element-1{
+    background-color: var(--blanco);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-bottom: 1px solid var(--gris);
+}
+.element-2{
+    background-color: var(--blanco);
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-bottom: 1px solid var(--gris);
+}
+.element-3{
+    background-color: var(--blanco);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.element-4{
+    background-color: var(--blanco);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.element h2, h3, h4{
+    color: var(--negro);
+    text-align: left;
+}
+
+.element img{
+    max-height: 70rem;
+    width: auto;
+}
+
+.detalles .nombre{
+    color: var(--negro);
+    font-size: 2rem;
+    text-align: left;
+}
+
+.detalles .descripcion{
+    width: 100%;
+    line-height: 2;
+    color: var(--negro);
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.detalles span{
+    font-weight: normal;
+}
+
+.button{
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    float: left;
+    margin-bottom: 2rem;
+    border: none;
+    line-height: 2;
+}
+
+.button-cursos{
+    background-color: var(--primario);
+    color: var(--blanco);
+    font-size: 1.2rem;
+    padding: 1.2rem 2.4rem;
+    float: left;
+    margin-bottom: 2rem;
+    border: none;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.button-cursos:hover {
+    background-color: var(--negro)
+  }
+
+/*============================================Nosotros============================================*/
+.detalles__contenedor-us {
+    display: flex; 
+    gap: 2rem; /* Espaciado entre la imagen y el texto */
+    align-items: stretch; /* Hace que ambos elementos tengan la misma altura */
+    width: 70%; 
+    margin: 4rem auto; 
+}
+
+.detalles__contenedor-us img {
+    flex: 1; 
+    max-width: 50%; /* Asegura que la imagen no se desborde */
+    object-fit: cover; /* Ajusta la imagen para que llene su espacio */
+}
+
+.detalles__contenedor-us p {
+    flex: 1; /* El texto ocupará el mismo espacio que la imagen */
+    margin: 0; 
+    text-align: justify; 
+    line-height: normal; 
+}
+
+.contenedor-us h2{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .detalles__contenedor-us {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; 
+        width: 90%;
+    }
+
+    .detalles__contenedor-us img {
+        max-width: 100%; 
+        margin-bottom: 1rem; /* Añade un espacio debajo de la imagen */
+    }
+}
+
+/*============================================Cursos============================================*/
+.layout-cursos {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row: repeat(3, 1fr);
+    width: 70%;
+    max-height: 220rem;
+    margin: 4rem auto 5rem auto; /*arriba derecha abajo izquierda*/
+    gap: 1.5rem;
+    row-gap: 3.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .layout-cursos{
+        display: flex;
+        flex-direction: column;
+        max-height: 270rem;
+        width: 90%;
+    }
+}
+
+.detalles__layout-cursos p{
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.detalles__layout-cursos h4{
+    line-height: 2;
+}
+
+.detalles__layout-cursos h3{
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+#titulo-cursos{
+    text-align: center;
+}
+
+.layout-cursos .element{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.layout-cursos .elemento-1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.layout-cursos .elemento-2{
+    background-color: var(--blanco);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.layout-cursos .elemento-3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.layout-cursos .elemento-4{
+    background-color: var(--blanco);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.layout-cursos .elemento-5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.layout-cursos .elemento-6{
+    background-color: var(--blanco);
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+/*============================================Contacto============================================*/
+
+/* Imagen responsive */
+.form-contenedor img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Para evitar que se estire demasiado */
+    object-fit: cover;
+  }
+
+  .form-contenedor h2{
+    text-align: center;
+  }
+  
+  /* Estilos del contenedor del formulario */
+  .form-contenedor {
+    max-width: 60%;
+    margin: 20px auto;
+    background-color: white;
+    padding-top: 2rem ;
+    margin-bottom: 8rem;
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+  }
+  
+  /* Estilos de los campos de formulario */
+  input, textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1.2rem;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+  }
+  
+  textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  /* Estilo del botón */
+  .button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 2;
+    padding: 5px 50px;
+  }
+  
+  button:hover {
+    background-color: var(--primario);
+  }
+  
+  /* Media Queries para responsive */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+  
+    .form-contenedor img {
+      max-height: 200px;
+    }
+  }
+  
+  /* Estilos cuando el campo tiene el enfoque */
+input:focus, textarea:focus {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6); 
+  }
+  
+  /* Estilos cuando el campo recibe el cursor (hover) */
+  input:hover, textarea:hover {
+    border-color: #cc4915; 
+    cursor: pointer; 
+  }
+  
+ 
